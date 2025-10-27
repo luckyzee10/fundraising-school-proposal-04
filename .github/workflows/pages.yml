@@ -23,21 +23,17 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Build artifact
+      - name: Prepare artifact in-place
         run: |
-          mkdir -p ./_site
-          cp -R "proposal-04"/* ./_site/
-          # disable jekyll processing
-          touch ./_site/.nojekyll
-          # include face assets used by the carousels (outside proposal-04)
           if [ -d "assets and copy" ]; then
-            cp -R "assets and copy" "./_site/"
+            cp -R "assets and copy" "proposal-04/"
           fi
-          echo "_site/ contents:" && ls -la ./_site
+          touch "proposal-04/.nojekyll"
+          echo "proposal-04/ contents:" && ls -la "proposal-04"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./_site
+          path: proposal-04
 
   deploy:
     environment:
