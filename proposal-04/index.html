@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fundraising School — Concept 04</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      (function () {
+        try {
+          var params = new URLSearchParams(location.search);
+          var theme = params.get('theme');
+          if (!theme) return;
+          var map = { '01': 'themes/theme-01.css', '02': 'themes/theme-02.css', '03': 'themes/theme-03.css' };
+          var href = map[theme];
+          if (!href) return;
+          var link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = href;
+          document.head.appendChild(link);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="progress-nav" data-progress-nav aria-label="Page progress">
+      <div class="progress-nav__track" aria-hidden="true">
+        <div class="progress-nav__fill" data-progress-fill></div>
+      </div>
+      <button class="progress-nav__dot" style="top: 6%" data-target="#program" aria-label="Beginning"></button>
+      <button class="progress-nav__dot" style="top: 18%" data-target="#journey" aria-label="For Founders who refuse incremental progress"></button>
+      <button class="progress-nav__dot" style="top: 30%" data-target="#trajectory" aria-label="Program Journey"></button>
+      <button class="progress-nav__dot" style="top: 42%" data-target="#learn-from" aria-label="Who you'll learn from"></button>
+      <button class="progress-nav__dot" style="top: 54%" data-target="#curriculum" aria-label="Curriculum"></button>
+      <button class="progress-nav__dot" style="top: 66%" data-target="#network" aria-label="Mentors"></button>
+      <button class="progress-nav__dot" style="top: 78%" data-target="#proof" aria-label="Proof"></button>
+      <button class="progress-nav__dot" style="top: 90%" data-target="#resources" aria-label="Free Resources"></button>
+      <button class="progress-nav__dot" style="top: 98%" data-target="#apply" aria-label="Apply"></button>
+    </div>
+    <div class="aurora" aria-hidden="true">
+      <div class="aurora__layer layer-1"></div>
+      <div class="aurora__layer layer-2"></div>
+      <div class="aurora__layer layer-3"></div>
+      <canvas id="particle-canvas" class="aurora__particles" aria-hidden="true"></canvas>
+    </div>
+
+    <div class="logo-field" aria-hidden="true">
+      <div class="logo-field__column" data-speed="-0.14">
+        <img src="logos/500-logo.webp" alt="" />
+        <img src="logos/rappi-logo.webp" alt="" />
+        <img src="logos/habi-logo.webp" alt="" />
+        <img src="logos/a6z-logo.webp" alt="" />
+        <img src="logos/valor-logo.webp" alt="" />
+      </div>
+      <div class="logo-field__column" data-speed="0.18">
+        <img src="logos/nu-logo.webp" alt="" />
+        <img src="logos/kaszek.webp" alt="" />
+        <img src="logos/floogate-logo.webp" alt="" />
+        <img src="logos/ferrazzi-logo.webp" alt="" />
+        <img src="logos/leadershipadvisor-logo.webp" alt="" />
+      </div>
+      <div class="logo-field__column" data-speed="-0.22">
+        <img src="logos/upload-logo.webp" alt="" />
+        <img src="logos/monashees-logo.webp" alt="" />
+        <img src="logos/britten-logo.webp" alt="" />
+        <img src="logos/connected-success-logo.webp" alt="" />
+        <img src="logos/claure%20group-logo.webp" alt="" />
+      </div>
+      <div class="logo-field__column" data-speed="0.26">
+        <img src="logos/hollandandkingh-logo.webp" alt="" />
+        <img src="logos/valor-logo.webp" alt="" />
+        <img src="logos/nu-logo.webp" alt="" />
+        <img src="logos/rappi-logo.webp" alt="" />
+        <img src="logos/ferrazzi-logo.webp" alt="" />
+      </div>
+    </div>
+
+    <header class="nav" data-animate>
+      <a class="nav__logo" href="#top" aria-label="Fundraising School home">
+        <img src="../assets and copy/image.webp" alt="Fundraising School logo" />
+      </a>
+      <nav class="nav__links">
+        <a href="#program">Program</a>
+        <a href="#journey">Journey</a>
+        <a href="#curriculum">Curriculum</a>
+        <a href="#network">Network</a>
+        <a href="#resources">Resources</a>
+      </nav>
+      <div class="nav__ctas">
+        <a class="nav__link" href="https://youtube.com/@FundraisingSchool-SeriesA" target="_blank" rel="noreferrer">
+          Watch free sessions
+        </a>
+        <a class="btn btn--nav" href="#apply">Apply</a>
+      </div>
+      <button class="nav__toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero" id="program">
+        <div class="hero__content" data-animate>
+          <span class="hero__eyebrow">Fundraising School · Nov 25 – Dec 13</span>
+          <h1>
+            Raise with <em>conviction</em>. <br />
+            Close with <em>clarity</em>.
+          </h1>
+          <p>
+            A three-week kinetic intensive crafted by Andres Bilbao and Angelica Carrillo. Codify your investor fit,
+            activate a vetted pipeline, and ship collateral that moves deals forward.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#apply">Secure a seat</a>
+            <a class="btn btn--ghost" href="#curriculum">Explore the experience</a>
+          </div>
+          <div class="hero__meta">
+            <div>
+              <span>Live cohort rhythm</span>
+              <strong>Tues · Thurs 6 PM ET · Sat 1 PM ET</strong>
+            </div>
+            <div>
+              <span>Tuition</span>
+              <strong>$1,450 · Scholarships + guarantee</strong>
+            </div>
+          </div>
+        </div>
+        <div class="hero__visual" data-animate>
+          <div class="hero__orb orb-1"></div>
+          <div class="hero__orb orb-2"></div>
+          <div class="hero__grid">
+            <div>8 live sprints</div>
+            <div>Investors on-call</div>
+            <div>Operator-built systems</div>
+            <div>AI-accelerated workflows</div>
+          </div>
+        </div>
+        <div class="hero__scroll" data-animate>
+          <span>Scroll</span>
+          <div class="hero__scroll-indicator"></div>
+        </div>
+      </section>
+
+      <section class="manifesto" id="journey">
+        <div class="manifesto__intro" data-animate>
+          <h2>For founders who refuse incremental progress.</h2>
+          <p>
+            Fundraising School exists for builders ready to rewrite what’s possible. This isn’t theory — it’s a
+            high-velocity lab where top 1% operators, YC partners, and investor-allies put your company under the lights.
+          </p>
+        </div>
+        <div class="manifesto__grid">
+          <article data-animate>
+            <span>Velocity</span>
+            <p>Compress months of wandering into focused sprints. Ship assets, cadences, and investor scripts live.</p>
+          </article>
+          <article data-animate>
+            <span>Precision</span>
+            <p>Build a pipeline aligned to your stage, sector, and ambition. No spray and pray intros — real investor fit.</p>
+          </article>
+          <article data-animate>
+            <span>Signal</span>
+            <p>Leverage the 30x.org network and alumni traction to open doors with credibility baked in.</p>
+          </article>
+          <article data-animate>
+            <span>Learn from the Best</span>
+            <p>Elite mentors and coaches share operator-level playbooks, candid feedback, and hands-on guidance built from real fundraising wins.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="journey" id="trajectory" aria-label="Program trajectory">
+        <div class="journey__headline" data-animate>
+          <span class="journey__tag">Program journey</span>
+          <h2>From positioning to signed wire in three immersive weeks.</h2>
+          <p>Follow the arc that founders take through narrative, collateral, and closing the deal.</p>
+        </div>
+        <div class="journey__timeline" data-step-progress>
+          <article>
+            <div class="journey__step">Week 01</div>
+            <h3>Narrative &amp; Investor Fit</h3>
+            <p>Define your thesis, tighten metrics, and build a precision investor list.</p>
+          </article>
+          <article>
+            <div class="journey__step">Week 02</div>
+            <h3>Collateral &amp; Outreach</h3>
+            <p>Ship modular decks, AI-assisted outreach, and high-signal intros.</p>
+          </article>
+          <article>
+            <div class="journey__step">Week 03</div>
+            <h3>Deal Execution</h3>
+            <p>Simulate diligence, negotiate terms, and calibrate your data room.</p>
+          </article>
+        </div>
+        <div class="journey__progress">
+          <div class="journey__progress-bar" data-progress-bar></div>
+        </div>
+      </section>
+
+      <section class="network" id="learn-from">
+        <div class="network__intro" data-animate>
+          <span class="network__tag">Who You'll Learn From</span>
+          <h2>Operator–investors teaching the playbooks.</h2>
+          <p>Get hands-on coaching from founders and partners who have raised and led at world-class firms.</p>
+        </div>
+        <div class="network__gallery" data-animate>
+          <div class="network__marquee" data-carousel="learn-from">
+            <div class="network__track" data-track></div>
+            <div class="network__track" data-track aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="modules" id="curriculum">
+        <div class="modules__intro" data-animate>
+          <span class="modules__tag">Curriculum</span>
+          <h2>Eight editorial chapters engineered around investor psychology.</h2>
+          <p>Expect candid frameworks, operator context, and tangible deliverables every session.</p>
+        </div>
+        <div class="modules__grid">
+          <article data-module="module-01" data-animate>
+            <span>01</span>
+            <h3>YC Application Lab</h3>
+            <p>Live memo teardown with Daniel Bilbao. Write a compelling application.</p>
+          </article>
+          <article data-module="module-02" data-animate>
+            <span>02</span>
+            <h3>VC Reality Check</h3>
+            <p>Understand fund math, partner incentives, and when to walk away.</p>
+          </article>
+          <article data-module="module-03" data-animate>
+            <span>03</span>
+            <h3>Deck Systems</h3>
+            <p>Build modular decks for cold, warm, and partner meetings.</p>
+          </article>
+          <article data-module="module-04" data-animate>
+            <span>04</span>
+            <h3>AI Pipeline Playbook</h3>
+            <p>Deploy AI to research investors and orchestrate personalized outreach.</p>
+          </article>
+          <article data-module="module-05" data-animate>
+            <span>05</span>
+            <h3>Cap Table Mastery</h3>
+            <p>Model dilution, SAFEs, and option pools with real founder scenarios.</p>
+          </article>
+          <article data-module="module-06" data-animate>
+            <span>06</span>
+            <h3>Diligence Ready</h3>
+            <p>Assemble data rooms, legal checklists, and DD-ready metrics.</p>
+          </article>
+          <article data-module="module-07" data-animate>
+            <span>07</span>
+            <h3>Pitch Lab</h3>
+            <p>Simulate tough conversations with angels, VCs, and operators.</p>
+          </article>
+          <article data-module="module-08" data-animate>
+            <span>08</span>
+            <h3>Demo Day</h3>
+            <p>Live feedback with alumni investors and curated guest partners.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="network" id="network">
+        <div class="network__intro" data-animate>
+          <span class="network__tag">Mentors</span>
+          <h2>Mentors</h2>
+          <p>
+            Tap founders who closed rounds with Sequoia, Kaszek, SoftBank, and Tiger. The deal room, updates, and investor
+            drops stay active long after graduation.
+          </p>
+        </div>
+        <div class="network__gallery" data-animate>
+          <div class="network__marquee" data-carousel="mentors">
+            <div class="network__track" data-track></div>
+            <div class="network__track" data-track aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials" id="proof">
+        <div class="testimonials__heading" data-animate>
+          <span class="testimonials__tag">Founder proof</span>
+          <h2>Operators who’ve shipped the round.</h2>
+        </div>
+        <div class="testimonials__viewport" data-slider>
+          <article>
+            <p>
+              “We closed a $4.2M seed in eight weeks. The investor comms engine we built here still runs today.”
+            </p>
+            <span>Enrique · Founder, Meru</span>
+          </article>
+          <article>
+            <p>
+              “Their diligence checklist made our process frictionless. Partners commented on how prepared we were.”
+            </p>
+            <span>Mercedes · CEO, Nova Labs</span>
+          </article>
+          <article>
+            <p>
+              “The alumni network is a force multiplier. We met our lead VC through a fellow graduate intro.”
+            </p>
+            <span>Gabriel · Co-founder, Alto</span>
+          </article>
+        </div>
+        <div class="testimonials__dots" data-slider-dots></div>
+      </section>
+
+      <section class="resources" id="resources">
+        <div class="resources__intro" data-animate>
+          <span class="resources__tag">Free resources</span>
+          <h2>Watch recent Fundraising School sessions.</h2>
+          <p>
+            Explore community talks and tactical deep dives straight from our YouTube channel. Each session is designed to
+            sharpen your investor story before the cohort begins.
+          </p>
+          <a class="resources__link" href="https://www.youtube.com/@FundraisingSchool-SeriesA/videos" target="_blank" rel="noreferrer">
+            Visit channel ↗
+          </a>
+        </div>
+        <div class="resources__grid">
+          <article class="resources__item" data-animate>
+            <div class="resources__video">
+              <iframe
+                src="https://www.youtube.com/embed/3ZSlvDq5zjQ"
+                title="Fundraising School session video 1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+          <article class="resources__item" data-animate>
+            <div class="resources__video">
+              <iframe
+                src="https://www.youtube.com/embed/noM-bjZhDQ4"
+                title="Fundraising School session video 2"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+          <article class="resources__item" data-animate>
+            <div class="resources__video">
+              <iframe
+                src="https://www.youtube.com/embed/1v96eKUjR5c"
+                title="Fundraising School session video 3"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+          <article class="resources__item" data-animate>
+            <div class="resources__video">
+              <iframe
+                src="https://www.youtube.com/embed/FiIIoiOL3eM"
+                title="Fundraising School session video 4"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+          <article class="resources__item" data-animate>
+            <div class="resources__video">
+              <iframe
+                src="https://www.youtube.com/embed/lCY0cYnG3No"
+                title="Fundraising School session video 5"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+          <article class="resources__item" data-animate>
+            <div class="resources__video">
+              <iframe
+                src="https://www.youtube.com/embed/mjd3TqPFcxQ"
+                title="Fundraising School session video 6"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta" id="apply">
+        <div class="cta__inner" data-animate>
+          <h2>Applications now open.</h2>
+          <p>
+            Submit your deck or memo for review. We offer partial scholarships for underrepresented founders and a
+            money-back guarantee if you can’t put the systems to work.
+          </p>
+          <div class="cta__actions">
+            <a class="btn btn--primary" href="https://airtable.com/appudjkzcwnIO9ch9/shrwfLcnh19o9jTfr" target="_blank" rel="noreferrer">Apply today</a>
+            <a class="btn btn--ghost" href="mailto:hello@fundraisingschool.com">Connect with the team</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="module-tooltip" id="module-tooltip" aria-hidden="true"></div>
+
+    <footer class="footer" data-animate>
+      <div>Fundraising School · Powered by 30x.org</div>
+      <span>© 2024</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

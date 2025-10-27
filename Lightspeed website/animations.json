@@ -1,0 +1,64 @@
+[
+  {
+    "playState": "running",
+    "currentTime": 490336.1340001684,
+    "playbackRate": 1,
+    "timing": {
+      "delay": 0,
+      "direction": "normal",
+      "duration": 60250,
+      "easing": "linear",
+      "endDelay": 0,
+      "fill": "none",
+      "iterationStart": 0,
+      "iterations": null
+    },
+    "keyframes": [
+      {
+        "offset": 0,
+        "easing": "linear",
+        "composite": "replace",
+        "transform": "translateX(0px)",
+        "computedOffset": 0
+      },
+      {
+        "offset": 1,
+        "easing": "linear",
+        "composite": "auto",
+        "transform": "translateX(-4220px)",
+        "computedOffset": 1
+      }
+    ]
+  },
+  {
+    "playState": "running",
+    "currentTime": 490336.1340001684,
+    "playbackRate": 1,
+    "timing": {
+      "delay": 0,
+      "direction": "normal",
+      "duration": 55075,
+      "easing": "linear",
+      "endDelay": 0,
+      "fill": "none",
+      "iterationStart": 0,
+      "iterations": null
+    },
+    "keyframes": [
+      {
+        "offset": 0,
+        "easing": "linear",
+        "composite": "replace",
+        "transform": "translateX(-3806px)",
+        "computedOffset": 0
+      },
+      {
+        "offset": 1,
+        "easing": "linear",
+        "composite": "auto",
+        "transform": "translateX(0px)",
+        "computedOffset": 1
+      }
+    ]
+  }
+]
