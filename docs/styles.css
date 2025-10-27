@@ -888,17 +888,20 @@ section {
   position: relative;
   padding: 36px;
   border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.36);
+  background: rgba(255, 255, 255, 0.20);
   border: 1px solid rgba(255, 255, 255, 0.42);
   box-shadow: var(--shadow);
-  backdrop-filter: blur(18px) brightness(1.30);
+  backdrop-filter: blur(18px) brightness(1.32);
   display: grid;
   gap: 28px;
 }
 
 .network__marquee {
   position: relative;
-  overflow: hidden;
+  /* Keep horizontal clipping for marquee, allow vertical glow to show */
+  overflow-x: hidden;
+  overflow-y: visible;
+  padding-bottom: 8px; /* headroom for logo glow without shifting content */
 }
 
 .network__track {
@@ -925,6 +928,7 @@ section {
   justify-items: center;
   gap: 10px;
   width: 200px;
+  position: relative; /* needed for soft radial underlay */
 }
 
 .mentor-card__face {
@@ -949,17 +953,39 @@ section {
   max-width: 150px;
   object-fit: contain;
   margin-top: 4px;
-  /* Softer, almost imperceptible glow */
-  filter:
-    drop-shadow(0 0 6px rgba(255, 255, 255, 0.16))
-    drop-shadow(0 2px 6px rgba(5, 4, 14, 0.18));
+  /* Minimal edge lift; main contrast comes from radial underlay */
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.12));
   opacity: 0.9;
 }
 
-/* Platzi: remove dark halo */
-.mentor-card__logo[data-company="platzi"] {
-  filter: none;
+/* Radial underlay to lift logos without visible outline */
+.mentor-card:has(.mentor-card__logo)::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 8px;
+  width: 68%;
+  height: 36px;
+  background: radial-gradient(closest-side, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0) 70%);
+  filter: blur(15px);
+  pointer-events: none;
 }
+
+/* Stronger underlay specifically for Platzi */
+.mentor-card:has(.mentor-card__logo[data-company="platzi"])::after {
+  width: 74%;
+  height: 40px;
+  background: radial-gradient(closest-side, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0) 72%);
+  filter: blur(20px);
+}
+
+/* Platzi: keep very subtle halo; underlay handles most contrast */
+.mentor-card__logo[data-company="platzi"] { filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.16)); }
+
+/* SoftBank: subtle halo as well */
+.mentor-card__logo[data-company="soft bank"],
+.mentor-card__logo[data-company="softbank"] { filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.16)); }
 
 @media (min-width: 1100px) {
   .mentor-card__logo {
