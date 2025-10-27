@@ -888,10 +888,10 @@ section {
   position: relative;
   padding: 36px;
   border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.36);
+  border: 1px solid rgba(255, 255, 255, 0.42);
   box-shadow: var(--shadow);
-  backdrop-filter: blur(18px) brightness(1.14);
+  backdrop-filter: blur(18px) brightness(1.30);
   display: grid;
   gap: 28px;
 }
@@ -956,11 +956,9 @@ section {
   opacity: 0.9;
 }
 
-/* Platzi: use a darker halo to sit better on dark backgrounds */
+/* Platzi: remove dark halo */
 .mentor-card__logo[data-company="platzi"] {
-  filter:
-    drop-shadow(0 0 6px rgba(0, 0, 0, 0.4))
-    drop-shadow(0 2px 8px rgba(0, 0, 0, 0.35));
+  filter: none;
 }
 
 @media (min-width: 1100px) {

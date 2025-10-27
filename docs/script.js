@@ -770,13 +770,14 @@ const companyToLogo = new Map([
   ["claure group", "claure group-logo.webp"],
   ["britten", "britten-logo.webp"],
   ["monashees+", "monashees-logo.webp"],
+  ["monashees", "monashees-logo.webp"],
   ["upload", "upload-logo.webp"],
   ["holland and knight", "hollandandkingh-logo.webp"],
   ["valor", "valor-logo.webp"],
   ["nu bank", "nu-logo.webp"],
   ["lightspeed", "lightspeed-logo.webp"],
-  ["soft bank", "sofbank-logo4.png"],
-  ["softbank", "sofbank-logo4.png"],
+  ["soft bank", "softbank-logo.webp"],
+  ["softbank", "softbank-logo.webp"],
   ["ignia", "ignia-logo.webp"],
   ["platzi", "platzi-logo.webp"],
   ["qed", "qed-logo.webp"],
@@ -791,6 +792,7 @@ const nameOverrides = new Map([
   [normalizeName("Eyal Shats"), "mistery-logo-3.webp"],
   [normalizeName("Laura Gonzalez"), "mystery-logo-4.webp"],
   [normalizeName("Keith Ferrazzi"), "ferrazzi-logo.webp"],
+  [normalizeName("Ronen Olshansky"), "connected-success-logo.webp"],
 ]);
 
 function lookupLogoForPerson(name, company, role) {
