@@ -29,6 +29,11 @@ jobs:
           cp -R "proposal-04"/* ./_site/
           # disable jekyll processing
           touch ./_site/.nojekyll
+          # include face assets used by the carousels (outside proposal-04)
+          if [ -d "assets and copy" ]; then
+            cp -R "assets and copy" "./_site/"
+          fi
+          echo "_site/ contents:" && ls -la ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
