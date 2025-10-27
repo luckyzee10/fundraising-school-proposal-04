@@ -12,4 +12,7 @@ node_modules/
 dist/
 build/
 
+# Ignore heavy reference dump
+Lightspeed website/
+
 
