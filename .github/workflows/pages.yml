@@ -27,10 +27,8 @@ jobs:
         run: |
           mkdir -p ./_site
           cp -R "proposal-04"/* ./_site/
-          # Include face assets used by the carousels
-          if [ -d "assets and copy" ]; then
-            cp -R "assets and copy" "./_site/"
-          fi
+          # disable jekyll processing
+          touch ./_site/.nojekyll
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

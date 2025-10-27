@@ -582,7 +582,8 @@ Sarah AlSaleh
 General Partner - 
 `;
 
-const assetsBase = "../assets and copy/";
+// On GitHub Pages, site is served from proposal-04 root. Place assets alongside index.html
+const assetsBase = "assets and copy/";
 
 function normalizeName(str) {
   return (str || "")
@@ -892,7 +893,7 @@ function lookupLogoForPerson(name, company, role) {
     const end = getTopY(targets[targets.length - 1]);
     const span = Math.max(1, end - start);
     // Per-dot pixel adjustments (positive pushes later/down, negative sooner/up)
-    const adjustPx = [0, 0, 0, -50, +110, 0, +170, 0, 0]; // bubble 4: 12px sooner
+    const adjustPx = [0, 0, 0, -50, +110, 0, +200, +200, 0]; // bubble 4: 12px sooner
     dots.forEach((dot, i) => {
       const y = getTopY(targets[i]) + (adjustPx[i] || 0);
       const ratio = Math.min(1, Math.max(0, (y - start) / span));
