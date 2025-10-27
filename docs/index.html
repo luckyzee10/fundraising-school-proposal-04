@@ -27,6 +27,16 @@
         } catch (e) {}
       })();
     </script>
+    <script>
+      (function () {
+        try {
+          var params = new URLSearchParams(location.search);
+          if ((params.get('bg') || '').toLowerCase() === 'white') {
+            document.documentElement.classList.add('bg-white');
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div class="progress-nav" data-progress-nav aria-label="Page progress">
@@ -109,12 +119,11 @@
         <div class="hero__content" data-animate>
           <span class="hero__eyebrow">Fundraising School · Nov 25 – Dec 13</span>
           <h1>
-            Raise with <em>conviction</em>. <br />
-            Close with <em>clarity</em>.
+            Build an investor narrative that feels <em>inevitable</em>, not hopeful.
           </h1>
           <p>
-            A three-week kinetic intensive crafted by Andres Bilbao and Angelica Carrillo. Codify your investor fit,
-            activate a vetted pipeline, and ship collateral that moves deals forward.
+            A three-week editorial-style program crafted by Andres Bilbao and Angelica Carrillo. Designed to help you refine
+            your investor narrative, build an actionable data room, and enter every meeting with clarity.
           </p>
           <div class="hero__actions">
             <a class="btn btn--primary" href="#apply">Secure a seat</a>
@@ -147,6 +156,8 @@
         </div>
       </section>
 
+      
+
       <section class="manifesto" id="journey">
         <div class="manifesto__intro" data-animate>
           <h2>For founders who refuse incremental progress.</h2>
@@ -171,6 +182,30 @@
           <article data-animate>
             <span>Learn from the Best</span>
             <p>Elite mentors and coaches share operator-level playbooks, candid feedback, and hands-on guidance built from real fundraising wins.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Leaders section: Angelica Carrillo and Andres Beltran -->
+      <section class="leaders" id="leaders">
+        <h2>Your Hosts</h2>
+        <div class="leaders__grid">
+          <article class="leaders__card" data-animate>
+            <img class="leaders__photo" src="assets and copy/angelica-carrillo.jpeg" alt="Angelica Carrillo" />
+            <h3>Angelica Carrillo</h3>
+            <p>
+              A venture builder with 10+ years across tech, biotech, health‑tech, and ed‑tech, she turns ideas into scalable, fundable companies.<br />
+              She’s on a mission to arm LATAM founders with the systems, strategy, and stamina to win globally.
+            </p>
+          </article>
+          <article class="leaders__card" data-animate>
+            <img class="leaders__photo" src="assets and copy/andres%20bilbao.png" alt="Andres Bilbao" />
+            <h3>Andrés Bilbao</h3>
+            <p>
+              Andrés Bilbao co‑founded Rappi and helped turn it into LATAM’s first delivery unicorn.<br />
+              A sharp operator with a bias for action, he champions scrappy execution over startup theory.<br />
+              Now he’s backing the next wave of founders—pushing them to think bigger, move faster, and build globally.
+            </p>
           </article>
         </div>
       </section>
@@ -312,6 +347,37 @@
         <div class="testimonials__dots" data-slider-dots></div>
       </section>
 
+      <!-- Large video moved here (was below) -->
+      <section class="resources" id="featured-video">
+        <div class="resources__grid">
+          <article class="resources__item" data-animate>
+            <div class="resources__video">
+              <iframe
+                src="https://www.youtube.com/embed/1R5-cTsDS-8"
+                title="YouTube video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Applications section moved above free resources -->
+      <section class="cta" id="apply">
+        <div class="cta__inner" data-animate>
+          <h2>Applications now open.</h2>
+          <p>
+            Submit your deck or memo for review. We offer partial scholarships for underrepresented founders and a
+            money-back guarantee if you can’t put the systems to work.
+          </p>
+          <div class="cta__actions">
+            <a class="btn btn--primary" href="https://airtable.com/appudjkzcwnIO9ch9/shrwfLcnh19o9jTfr" target="_blank" rel="noreferrer">Apply today</a>
+            <a class="btn btn--ghost" href="mailto:hello@fundraisingschool.com">Connect with the team</a>
+          </div>
+        </div>
+      </section>
+
       <section class="resources" id="resources">
         <div class="resources__intro" data-animate>
           <span class="resources__tag">Free resources</span>
@@ -385,22 +451,44 @@
               ></iframe>
             </div>
           </article>
+          
+          
+          <article class="resources__item" data-animate>
+            <div class="resources__video">
+              <iframe
+                src="https://www.youtube.com/embed/FiIIoiOL3eM"
+                title="Fundraising School session video 16"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+          <!-- +16 more videos (unique IDs) -->
+          <article class="resources__item" data-animate><div class="resources__video"><iframe src="https://www.youtube.com/embed/-ReQ9LpBmQs" title="Video 17" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article>
+          <article class="resources__item" data-animate><div class="resources__video"><iframe src="https://www.youtube.com/embed/vhcr4oicayw" title="Video 18" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article>
+          <article class="resources__item" data-animate><div class="resources__video"><iframe src="https://www.youtube.com/embed/c3guILAa7F8" title="Video 19" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article>
+          <article class="resources__item" data-animate><div class="resources__video"><iframe src="https://www.youtube.com/embed/VKglqHt-ePQ" title="Video 20" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article>
+          <article class="resources__item" data-animate><div class="resources__video"><iframe src="https://www.youtube.com/embed/8diwlKZPEZ0" title="Video 21" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article>
+          <article class="resources__item" data-animate><div class="resources__video"><iframe src="https://www.youtube.com/embed/ONPKGrBTaEE" title="Video 22" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article>
+          <article class="resources__item" data-animate><div class="resources__video"><iframe src="https://www.youtube.com/embed/X_sTtxqxMP8" title="Video 23" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article>
+          <article class="resources__item" data-animate><div class="resources__video"><iframe src="https://www.youtube.com/embed/nwbSdF35n5w" title="Video 24" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article>
+          <article class="resources__item" data-animate><div class="resources__video"><iframe src="https://www.youtube.com/embed/7TByqJUcrYE" title="Video 25" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article>
+          <article class="resources__item" data-animate><div class="resources__video"><iframe src="https://www.youtube.com/embed/IDREO55RFkc" title="Video 26" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article>
+          <article class="resources__item" data-animate><div class="resources__video"><iframe src="https://www.youtube.com/embed/QYrWPsf42SY" title="Video 27" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article>
+          <article class="resources__item" data-animate><div class="resources__video"><iframe src="https://www.youtube.com/embed/HYwVbeS7Q0k" title="Video 28" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article>
+          <article class="resources__item" data-animate><div class="resources__video"><iframe src="https://www.youtube.com/embed/cfzmxlm1QsU" title="Video 29" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article>
+          <article class="resources__item" data-animate><div class="resources__video"><iframe src="https://www.youtube.com/embed/zqROlwurFdk" title="Video 30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article>
+          <article class="resources__item" data-animate><div class="resources__video"><iframe src="https://www.youtube.com/embed/4FU50FpLgUk" title="Video 31" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article>
+          <article class="resources__item" data-animate><div class="resources__video"><iframe src="https://www.youtube.com/embed/Gi3YviZqFZY" title="Video 32" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article>
+        </div>
+        <div class="resources__more">
+          <a class="btn btn--ghost" href="https://www.youtube.com/@FundraisingSchool-SeriesA/videos" target="_blank" rel="noreferrer">View more videos</a>
         </div>
       </section>
 
-      <section class="cta" id="apply">
-        <div class="cta__inner" data-animate>
-          <h2>Applications now open.</h2>
-          <p>
-            Submit your deck or memo for review. We offer partial scholarships for underrepresented founders and a
-            money-back guarantee if you can’t put the systems to work.
-          </p>
-          <div class="cta__actions">
-            <a class="btn btn--primary" href="https://airtable.com/appudjkzcwnIO9ch9/shrwfLcnh19o9jTfr" target="_blank" rel="noreferrer">Apply today</a>
-            <a class="btn btn--ghost" href="mailto:hello@fundraisingschool.com">Connect with the team</a>
-          </div>
-        </div>
-      </section>
+      
+
+      
     </main>
 
     <div class="module-tooltip" id="module-tooltip" aria-hidden="true"></div>
