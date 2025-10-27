@@ -994,6 +994,28 @@ section {
   }
 }
 
+/* Mobile performance tweaks */
+@media (max-width: 640px) {
+  .network__gallery {
+    padding: 24px;
+    gap: 20px;
+    backdrop-filter: blur(10px) brightness(1.18);
+  }
+  .network__track .mentor-card__face,
+  .mentor-card__face {
+    width: 132px;
+    height: 132px;
+  }
+  .mentor-card {
+    width: 168px;
+    gap: 8px;
+  }
+  .mentor-card__logo {
+    height: 24px;
+    max-width: 130px;
+  }
+}
+
 /* Company-specific logo size adjustments for very wide logos */
 .mentor-card__logo[data-company="soft bank"],
 .mentor-card__logo[data-company="softbank"] {

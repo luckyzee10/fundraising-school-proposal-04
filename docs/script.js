@@ -815,6 +815,35 @@ function lookupLogoForPerson(name, company, role) {
   return null;
 }
 
+// Defer loading of YouTube iframes in the resources grid to reduce mobile memory pressure
+(() => {
+  const iframes = Array.from(document.querySelectorAll('.resources__video iframe'));
+  if (!iframes.length) return;
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        if (!el.getAttribute('src') && el.dataset.src) {
+          el.setAttribute('src', el.dataset.src);
+        }
+        el.removeAttribute('data-src');
+        obs.unobserve(el);
+      }
+    });
+  }, { rootMargin: '800px 0px', threshold: 0.01 });
+
+  iframes.forEach((el) => {
+    const src = el.getAttribute('src');
+    if (src) {
+      el.setAttribute('loading', 'lazy');
+      el.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+      el.dataset.src = src;
+      el.removeAttribute('src');
+      observer.observe(el);
+    }
+  });
+})();
+
 // Progress nav logic
 (() => {
   const nav = document.querySelector('[data-progress-nav]');
