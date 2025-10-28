@@ -1001,6 +1001,9 @@ section {
     gap: 20px;
     backdrop-filter: blur(10px) brightness(1.18);
   }
+  /* Faster marquee on phones */
+  .network__track { animation-duration: 16s; }
+  .network__track:nth-child(2) { animation-delay: -8s; }
   .network__track .mentor-card__face,
   .mentor-card__face {
     width: 132px;
